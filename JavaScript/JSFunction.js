@@ -72,7 +72,6 @@ function myFunction(){
                   // return;
                 });
                 notFinished = true;
-                console.log(notFinished);
               }
             }
           });
@@ -83,8 +82,6 @@ function myFunction(){
                 document.getElementById(("f"+h+""+r)).style.background = "#f8f5ff";
               }
               notFinished = true;
-              console.log(notFinished);
-
             }
           }
           for (v = 0; v < 9; v++) { //Vertical
@@ -94,20 +91,17 @@ function myFunction(){
                 document.getElementById(("f"+c+""+v)).style.background = "#f8f5ff";
               }
               notFinished = true;
-              console.log(notFinished);
-
             }
           }
         }
       }
       else {
         notFinished = true;
-        console.log(notFinished);
       }
     }
   }
   if (!notFinished) {
-    document.getElementById("Btn").value = "Done";
-    console.log("Yay, done");
+    document.getElementById("Btn").innerHTML = "Done";
+    document.getElementById("Btn").disabled = true;   
   }
 }
